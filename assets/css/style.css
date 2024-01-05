@@ -28,6 +28,7 @@ a{
 :root {
     --width-icon: 32px;
     --theme-color:#abd809;
+    --theme-font-color:#FF4141;
     --size-index: 1vw;
     --color-font-main-gray:#4c5b5c;
     --time-transition:.5s;
@@ -166,4 +167,87 @@ a{
     color: var(--theme-color);
     border-bottom: 5px solid var(--theme-color);
     transition: all var(--time-transition);
+}
+
+/* advantage */
+.advantage{
+    padding-top: 100px;
+}
+.advantage h1{
+    font-size: 60px;
+    text-align: center;
+    color: var(--theme-font-color);
+    margin-bottom: 30px;
+}
+
+.advantage-items{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.advantage-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px 20px;
+}
+
+
+
+.advantage-item__wrapper {
+    display: inline-block; /* Добавьте это, чтобы обертка занимала только ширину и высоту контента */
+    position: relative;
+  }
+
+.advantage-item__icon{
+    font-size: 50px;
+    width: 83px;
+    height: 83px;
+    border: 2px solid #cccccc;
+    transform: rotate(45deg);
+    border-radius: 7px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    transition: all linear .35s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.advantage-item__icon::before{
+    display: block;
+    transform: rotate(-45deg);
+    color: #FF4141;
+    font-size: 50px;
+    transition: all linear .35s;
+}
+
+.advantage-item:hover .advantage-item__icon{
+        transform: rotate(0deg);
+        transition: all linear .35s;
+        background-color: #FF4141;
+        border-color: #FF4141;
+}
+
+.advantage-item:hover .advantage-item__icon::before {
+    transform: rotate(0deg);
+    transition: all linear .35s;
+    color: #ffffff;
+}
+
+.advantage-item-content{
+    font-size: 15px;
+    text-align: center;
+}
+
+.advantage-item-content__title{
+    margin-bottom: 15px;
+}
+
+.advantage-item-content__text{
+    line-height: 1.5;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7);
 }
