@@ -34,6 +34,7 @@ a {
     --size-index: 1vw;
     --color-font-main-gray: #4c5b5c;
     --time-transition: .5s;
+    --duration__open:1s;
 }
 
 .wrapper {
@@ -274,6 +275,7 @@ a {
     box-sizing: border-box;
     z-index: 3;
     padding-top: 56px;
+    padding-bottom: 45px;
     text-align: center;
     transition: .5s background;
     position: relative;
@@ -368,4 +370,105 @@ a {
 .block:hover .green_button {
     transition: .5s opacity, .5s visibility, .3s background-color;
 
+}
+
+/* faq */
+
+.faq-title{
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.faq--margins{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.faq-accordion__wrapper{
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    padding: 15px;
+}
+.answer{
+    /* opacity: 0; */
+    /* visibility: hidden; */
+    width: 100%;
+    max-height: 0px;
+    overflow: hidden;
+    transition:var(--duration__open) max-height;
+}
+
+.accordion__item{
+    position: relative;
+}
+
+.accordion__description{
+    padding-left: 25px;
+    padding-left: 25px;
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+
+.accordion__description::before{
+    content: "+";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1;
+    transform: rotate(0deg);
+    transition: var(--duration__open) transform;
+}
+
+.ac-radio{
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.ac-radio:checked ~ label .answer{
+    /* opacity: 1; */
+    /* visibility: visible; */
+    width: 100%;
+    max-height: 500px;
+    transform: rotate(0deg);
+    transition: var(--duration__open) max-height;
+    
+}
+.ac-radio:checked ~ .accordion__description::before{
+    transform: rotate(135deg);
+    transition: var(--duration__open) transform;
+}
+
+.accordion__item .question{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.accordion__item .answer{
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.answer p{
+    margin-top: 15px;
+}
+.answer p+p{
+    margin-top: 10px;
+}
+
+.faq-title--margins{
+    margin-bottom: 20px;
 }
