@@ -15,24 +15,30 @@ ul {
     list-style: none;
 }
 
-a {
+a, input {
     font-size: inherit;
     color: inherit;
+    background: inherit;
     text-decoration: none;
 }
 
 .main-font {
     font-family: Roboto, sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 :root {
     --width-icon: 32px;
     --theme-color: #abd809;
     --theme-font-color: #FF4141;
+    --theme-font-color--hover: #F40000;
+    --btn-bg-hover:#2c343b;
+
     --size-index: 1vw;
     --color-font-main-gray: #4c5b5c;
+    --color-font-light: #ffffff;
+
     --time-transition: .5s;
     --duration__open:1s;
 }
@@ -134,6 +140,10 @@ a {
 .time-work__icon,
 .info-block__contacts-icon {
     padding-top: 5px;
+}
+
+.info-block .icon img{
+    height: auto;
 }
 
 .phone-number {
@@ -471,4 +481,125 @@ a {
 
 .faq-title--margins{
     margin-bottom: 20px;
+}
+
+/* contact-form */
+
+.contact-form__title{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.contact-form--margins{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.contact-form__description{
+    line-height: 1.5;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.contact-form-content {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+
+}
+.form {
+}
+
+.form-wrapper{
+    width: 100%;
+    padding: 20px 50px 20px 0px;
+}
+
+.form-fields{
+    display: flex;
+    gap: 30px;
+}
+
+.form-fields input::placeholder {
+  font-weight: bold;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  opacity: 0.5;
+  color: var(--color-font-main-gray);
+
+}
+
+.form-field{
+    border: 0;
+    background: none;
+    border-bottom: solid 1px #8c8c8c;
+    width: 50%;
+    margin-bottom: 60px;
+    font-size: 18px;
+    line-height: 45px;
+    outline:none;
+}
+
+.form-field:focus{
+    outline:none;
+    border: 0px;
+    border-bottom: solid 1px #8c8c8c;
+}
+
+
+
+.contacts {
+}
+
+.contacts-wrapper{
+    border: 2px solid #dcdcdc;
+    -webkit-border-radius: 5px;
+    border-radius: 8px;
+    padding: 30px 55px;
+}
+
+.contacts-wrapper .phone-number{
+    color: var(--theme-font-color);
+    font-size: 35px;
+    white-space: nowrap;
+}
+.contacts-wrapper .phone-number a:hover{
+    color: var(--theme-font-color--hover);
+}
+
+.contacts-shedule-text{
+    text-align: center;
+    font-size: 20px;
+}
+
+.shedule-text--margins{
+    margin-top: 20px;
+}
+
+.submit-btn{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.button{
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Roboto, sans-serif;
+    padding: 14px 51px;
+    line-height: 23px;
+    text-transform: uppercase;
+    color: var(--color-font-light);
+    background: var(--theme-font-color);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.button:hover{
+    background-color: var(--btn-bg-hover);
+    border-color: var(--btn-bg-hover);
+    transition: all var(--time-transition);
 }
