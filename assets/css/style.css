@@ -398,7 +398,8 @@ input {
     padding-bottom: 30px;
 }
 
-.faq-accordion__wrapper {
+.faq-accordion__wrapper,
+.work-region .conteiner {
     border-radius: 7px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
     display: flex;
@@ -594,7 +595,7 @@ input {
     font-weight: 700;
     font-family: Roboto, sans-serif;
     padding: 14px 51px;
-    line-height: 23px;
+    /* line-height: 23px; */
     text-transform: uppercase;
     color: var(--color-font-light);
     background: var(--theme-font-color);
@@ -628,13 +629,13 @@ input {
 .wrapper {}
 
 
-.conteiner {
+.work-region .conteiner {
     padding: 25px 30px;
     margin: 20px auto;
-    border: 1px solid var(--color-border-light-gray);
+    /* border: 1px solid var(--color-border-light-gray); */
     background: var(--color-font-light);
-    box-shadow: 3px 3px 0px 1px rgba(0, 0, 0, 0.06);
-    border-radius: 4px;
+    /* box-shadow: 3px 3px 0px 1px rgba(0, 0, 0, 0.06);
+    border-radius: 4px; */
 }
 
 .work-region__conteiner {
@@ -662,4 +663,79 @@ input {
 
 .list-cities li:hover{
     color: var(--theme-font-color--hover);
+}
+
+/* footer */
+.footer {
+    border-top: 1px solid #b7b7b7;
+    padding-top: 30px;
+}
+.wrapper {
+}
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.trade-mark {
+}
+.annotation {
+}
+.politic-link {
+    color: #000000;
+    transition: var(--time-transition) color;
+}
+.politic-link:hover {
+    color: var(--theme-font-color--hover);
+    transition: var(--time-transition) color;
+}
+.soc-links {
+}
+.soc-icon::before {
+    font-size: 35px;
+    border-radius: 50%;
+    text-align: center;
+    border: 1px solid #b7b7b7;
+    transition: all ease .45s;
+    padding: 10px;
+    color: var(--theme-font-color);
+    cursor: pointer;
+}
+
+.soc-icon:hover::before{
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+    transition: all ease .45s;
+    border-color: transparent;
+    color: var(--theme-font-color--hover);
+}
+
+
+
+.soc-list{
+    display: flex;
+    gap: 20px;
+
+
+}
+
+.icon-facebook {
+}
+.icon-vk {
+}
+.icon-instagram {
+}
+.icon-twitter {
+}
+.call-now {
+}
+.call-now h2{
+    font-size: 40px;
+    font-weight: 700;
+}
+.call-now p{
+    font-size: 16px;
+    font-weight: 500;
+}
+.develop {
+    color: #996969;
 }
