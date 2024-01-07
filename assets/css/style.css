@@ -25,6 +25,18 @@ input {
     text-decoration: none;
 }
 
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+}
+
+td, th {
+    vertical-align: top;
+    word-wrap: break-word;
+}
+
 .main-font {
     font-family: Roboto, sans-serif;
     font-weight: 500;
@@ -196,7 +208,6 @@ input {
 
 /* advantage */
 .advantage {
-    padding-top: 100px;
     padding-bottom: 50px;
 }
 
@@ -807,7 +818,7 @@ input {
 }
 
 .content-title {
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .content-text strong {
@@ -917,4 +928,111 @@ input {
 .install-step-text .text {
     line-height: 1.5;
     font-weight: 400;
+}
+
+/* price-list */
+
+.table-content{
+    font-weight: 400;
+}
+
+.price-list-inner h2{
+    margin-bottom: 50px;
+}
+
+.table-body .table-item{
+    width: 100%;
+}
+
+.table-body th {
+    line-height: 46px;
+    background: #f0f3f3;
+    font-weight: 500;
+}
+
+.table-body td, .table-body th {
+    border: 1px solid #dddede;
+    vertical-align: middle;
+}
+
+.table-body .table1 tr:first-child th:first-child {
+    text-align: left;
+    padding-left: 35px;
+}
+
+.table-body .table1 tr td:nth-child(n+1) {
+    width: 167px;
+}
+
+.table-body .table1 tr td:first-child {
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 15px;
+    width: 229px;
+    box-sizing: border-box;
+}
+
+.table-body .table3 {
+    max-width: 610px;
+}
+
+.table-body tr td {
+    text-align: center;
+    line-height: 44px;
+}
+
+.on_mobile {
+    display: none;
+}
+
+.table-body i{
+    display: block;
+}
+
+.table-body .mark {
+    padding-left: 33px;
+    margin-top: 30px;
+    position: relative;
+    font-style: normal;
+    color: #4c5b5c;
+}
+
+.table-body .mark::before{
+    content: '*';
+    position: absolute;
+    left: 21px;
+}
+
+.table-name-list{
+    display: flex;
+}
+
+.table-name-list .table-name{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 15px;
+    line-height: 41px;
+    color: #000;
+    cursor: pointer;
+    margin-right: -1px;
+    border: 1px solid #dddede;
+    padding: 0 27px;
+}
+
+.table-pagination{
+    margin-bottom: 30px;
+}
+
+.table-pagination .table-name.active {
+    font-weight: 600;
+    color: #000;
+    background: #abd809;
+}
+
+.table-body__wrapper{
+    display: none;
+}
+
+.table-body__wrapper.active{
+    display: block;
 }
