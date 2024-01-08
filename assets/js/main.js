@@ -44,4 +44,24 @@ menu.addEventListener("click", function () {
         document.body.classList.remove("lock");
         burgerIcon.checked = false;
     }
-})
+});
+
+var firstElements = document.querySelectorAll('.on_mobile .ah2');
+
+// Добавляем слушатель события click для каждого элемента "first"
+firstElements.forEach(function (firstElement) {
+  firstElement.addEventListener('click', function () {
+    // Находим следующий элемент с классом "second"
+    var nextSecondElement = firstElement.nextElementSibling;
+    console.log("click");
+    console.dir(nextSecondElement);
+
+    // Проверяем, существует ли следующий элемент с классом "second"
+    if (nextSecondElement && nextSecondElement.classList.contains('hide')) {
+      // Добавляем класс "active" к следующему элементу "second"
+console.log("exist");
+      firstElement.classList.toggle('active');
+      nextSecondElement.classList.toggle('active');
+    }
+  });
+});
