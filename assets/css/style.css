@@ -10,7 +10,7 @@ html,
 body {
     height: auto;
     width: 100%;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 img {
@@ -472,7 +472,7 @@ th {
 
 @media screen and (max-width: 1000px) {
     .advantage h1 {
-        font-size: calc(var(--size-index) * 3.3);
+        font-size: calc(var(--size-index) * 3.3 + 7px);
     }
 
     ;
@@ -864,6 +864,7 @@ th {
 @media screen and (max-width: 500px) {
     .contact-form__title {
         font-size: calc(var(--size-font) * 1.33);
+        margin-bottom: 20px;
     }
     
     .contact-form--margins {
