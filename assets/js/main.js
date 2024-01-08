@@ -19,3 +19,29 @@ if (tableNames) {
         })
     });
 }
+
+// burger
+
+let burgerIcon = document.querySelector("#check-menu");
+let menu = document.querySelector(".header-menu");
+let lebelBurger = document.querySelector(".label-burger");
+
+burgerIcon.addEventListener('change', ()=>{
+
+    if (burgerIcon.checked){
+        menu.classList.add("header-menu__active");
+        document.body.classList.add("lock");
+    }else{
+        menu.classList.remove("header-menu__active");
+        document.body.classList.remove("lock");
+        
+    }
+});
+
+menu.addEventListener("click", function () {
+    if (burgerIcon.checked) {
+        menu.classList.remove("header-menu__active");
+        document.body.classList.remove("lock");
+        burgerIcon.checked = false;
+    }
+})
