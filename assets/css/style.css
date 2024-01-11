@@ -11,6 +11,7 @@ body {
     height: auto;
     width: 100%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 img {
@@ -81,6 +82,7 @@ th {
     display: flex;
     flex-direction: column;
     gap: 100px;
+    
 }
 
 @media screen and (max-width: 1000px) {
@@ -166,7 +168,7 @@ th {
     }
 }
 
-.box {}
+
 
 .logo {
     max-width: 165px;
@@ -734,7 +736,7 @@ th {
 
 @media screen and (max-width: 500px) {
   .faq-title{
-    font-size: 20px;
+    font-size: 6vw;
   }
 }
 
@@ -863,7 +865,7 @@ th {
 
 @media screen and (max-width: 500px) {
     .contact-form__title {
-        font-size: calc(var(--size-font) * 1.33);
+        font-size: 6vw;
         margin-bottom: 20px;
     }
     
@@ -908,7 +910,7 @@ th {
 }
 
 .form-fields input::placeholder {
-    font-weight: bold;
+    font-weight: 700;
     font-family: Roboto, sans-serif;
     font-size: 20px;
     opacity: 0.5;
@@ -1256,7 +1258,7 @@ th {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
+    font-weight: 700;
     border: 2.3px solid #acafb7;
     animation: radial-pulse 6s infinite;
     animation-delay: 2s;
@@ -1340,11 +1342,17 @@ th {
 
 .install-description-control .button {
     width: fit-content;
+    font-size:4vw;
 }
 
 .price-install {
     font-size: 30px;
     font-weight: 900;
+}
+@media screen and (max-width: 500px) {
+  .price-install{
+    font-size: 20px;
+  }
 }
 
 .button {}
@@ -1370,6 +1378,15 @@ th {
     font-size: 40px;
     font-weight: 700;
     text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+   
+    .content-title,
+    .title{
+        font-size: 6vw;
+    }
+  
 }
 
 .steps-content {
@@ -1439,6 +1456,13 @@ th {
     margin-bottom: 15px;
 }
 
+@media screen and (max-width: 500px) {
+    .install-step-text h3{
+        font-size: 5.1vw;
+    }
+  
+}
+
 .install-step-text .text {
     line-height: 1.5;
     font-weight: 400;
@@ -1496,7 +1520,7 @@ th {
     line-height: 44px;
 }
 
-.on_mobile {
+.mobile-table {
     display: none;
 }
 
@@ -1504,11 +1528,11 @@ th {
   .table-item{
     display: none;
   }
-  .on_mobile{
+  .mobile-table{
     display: block;
   }
 
-  .on_mobile .ah2 {
+  .mobile-table .ah2 {
     line-height: 17px;
     background: #f0f3f3;
     padding-left: 18px;
@@ -1519,7 +1543,7 @@ th {
     position: relative;
 }
 
-.on_mobile .ah2.cp:after {
+.mobile-table .ah2.cp:after {
     content: '';
     position: absolute;
     right: 20px;
@@ -1534,7 +1558,7 @@ th {
     transform: rotate(180deg);
 }
 
-.on_mobile .ah2.active:after {
+.mobile-table .ah2.active:after {
     -moz-transform: rotate(0);
     -ms-transform: rotate(0);
     -webkit-transform: rotate(0);
@@ -1542,18 +1566,18 @@ th {
     transform: rotate(0);
 }
 
-.on_mobile .hide {
+.mobile-table .hide {
     display: none;
     border-top: 3px solid #abd809;
     border-bottom: 3px solid #abd809;
 
 }
 
-.on_mobile .hide.active {
+.mobile-table .hide.active {
     display: block;
 }
 
-.on_mobile .hide .double {
+.mobile-table .hide .double {
     line-height: 43px;
     padding: 0 18px;
     border-bottom: 1px solid #dddede;
@@ -1561,18 +1585,18 @@ th {
     justify-content: space-evenly;
 }
 
-.on_mobile .double .fright{
+.mobile-table .double .fright{
     width: 60%;
     text-align: center;
 }
 
-.on_mobile .hide .ah3 {
+.mobile-table .hide .ah3 {
     background: #f0f3f3;
     padding: 13px 18px;
     border-bottom: 1px solid #dddede;
 }
 
-.on_mobile .hide.no_hide {
+.mobile-table .hide.no_hide {
     display: block;
     border-bottom: 0;
 }
@@ -1625,7 +1649,7 @@ th {
 }
 
 .table-pagination .table-name.active {
-    font-weight: 600;
+    font-weight: 700;
     color: #000;
     background: #abd809;
 }
