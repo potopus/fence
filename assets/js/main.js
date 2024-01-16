@@ -1,5 +1,6 @@
 let tableNames = document.querySelectorAll(".table-name-list .table-name");
 let tableBodies = document.querySelectorAll(".table-body .table-body__wrapper");
+let answerInputs = document.querySelectorAll(".accordion__item .ac-radio");
 
 if (tableNames) {
     tableNames.forEach(tableName => {
@@ -50,7 +51,7 @@ menu.addEventListener("click", function () {
     }
 });
 
-var firstElements = document.querySelectorAll('.mobile-table .ah2');
+let firstElements = document.querySelectorAll('.mobile-table .ah2');
 
 // Добавляем слушатель события click для каждого элемента "first"
 firstElements.forEach(function (firstElement) {
@@ -69,3 +70,31 @@ firstElements.forEach(function (firstElement) {
         }
     });
 });
+
+// добавляем слушатель на input для закрытия аккордеона
+document.addEventListener('DOMContentLoaded', function () {
+    answerInputs.forEach(function (answerInput) {
+        let changeFlag = false;
+        answerInput.addEventListener('mouseup', function () {
+        if (answerInput.checked){
+            changeFlag = false;
+        } else{
+            changeFlag = true;
+        }
+        });
+        answerInput.addEventListener('click', function () {
+            if (!changeFlag) {
+                closeOtherAccordions(answerInput);
+            }else {
+                answerInput.checked = true; // Добавлено для снятия с выбора при повторном клике
+            }
+        });
+    });
+    function closeOtherAccordions(clickedRadio) {
+        answerInputs.forEach(function (radio) {
+            if (radio == clickedRadio) {
+                radio.checked=false;
+            }
+        });
+    }
+})
