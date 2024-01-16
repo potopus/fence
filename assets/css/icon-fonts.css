@@ -10,7 +10,7 @@
   font-display: block;
 }
 
-[class^="icon-"]:before, [class*=" icon-"]:before {
+[class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: never;
@@ -25,6 +25,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-phone:before {
+  content: "\e909";
+}
+.icon-clock:before {
+  content: "\e908";
+}
 .icon-twitter:before {
   content: "\e904";
 }
