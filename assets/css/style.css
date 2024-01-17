@@ -340,6 +340,15 @@ th {
     display: flex;
     justify-content: center;
     align-items: center;
+    
+}
+
+.header-bottom h1{
+     max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .menu-items {
@@ -1404,11 +1413,17 @@ th {
 .steps-content {
     display: flex;
     gap: 20px;
+    flex-direction: column;
+    counter-reset: punkt;
 }
 
 .install-steps-item {
-    width: 25%;
+    width: 100%;
+    list-style-type:none;
+    display: flex;
 }
+
+
 
 @media screen and (max-width: 1280px) {
     .steps-content {
@@ -1441,16 +1456,27 @@ th {
     max-width: 305px;
 }
 
-.install-steps__image-content .step-number {
+.install-step-text .step-number {
     background: var(--theme-color);
     color: var(--color-font-light);
-    left: 0;
-    bottom: 13px;
+    /* left: 0; */
+    /* bottom: 13px; */
     font-size: 35px;
     line-height: 43px;
     text-align: center;
     width: 37px;
-    position: absolute;
+    /* position: absolute; */
+}
+
+.install-step-text .step-number::after {
+    counter-increment:punkt 1;
+    content:counter(punkt);
+    /* background: var(--theme-color);
+    color: var(--color-font-light);
+    font-size: 35px;
+    line-height: 43px;
+    text-align: center;
+    width: 37px; */
 }
 
 .install-step-text {
