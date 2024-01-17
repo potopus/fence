@@ -180,6 +180,7 @@ th {
     flex: 1;
     align-self: center;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .info-block {
@@ -229,6 +230,7 @@ th {
 
     .header-title-block {
         justify-content: center;
+        min-width: 230px;
     }
 
 }
@@ -1066,6 +1068,8 @@ th {
 @media screen and (max-width: 500px) {
     .header .button {
         align-self: flex-start;
+        flex: 1 1 170px;
+        order: 4;
     }
 }
 
