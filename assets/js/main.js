@@ -98,3 +98,26 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 })
+
+$(document).ready(function(){
+    $('.slider-items').slick({
+        // variableWidth: true,
+        slidesToShow:3,
+        prevArrow: "<div class='arrow-wrapper arrow__prev'><img src='../assets/img/svg/arrow-prev.svg' class='prev' alt='1'></div>",
+    nextArrow: "<div class='arrow-wrapper arrow__next'><img src='../assets/img/svg/arrow-next.svg' class='next' alt='2'></div>",
+    responsive:[
+        {
+            breakpoint:769,
+            settings:{
+                slidesToShow:2, 
+            }
+        },
+        {
+            breakpoint:500,
+            settings:{
+                slidesToShow:1, 
+            }
+        }
+    ]
+    });
+  });
