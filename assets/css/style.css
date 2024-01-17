@@ -327,10 +327,19 @@ th {
         font-size: inherit;
     }
 }
-
-.header-bottom {
+.header-midle{
     border-top: 3px solid #ebeeee;
     color: var(--color-font-main-gray);
+}
+
+.header-bottom{
+    background: url(../img/fon.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu-items {
@@ -466,7 +475,7 @@ th {
     }
 }
 
-.header-bottom .menu-item:hover {
+.header-midle .menu-item:hover {
     color: var(--theme-color);
     border-bottom: 5px solid var(--theme-color);
     transition: all var(--time-transition);
@@ -474,17 +483,18 @@ th {
 
 /* advantage */
 .advantage {
-    padding-bottom: 50px;
+    padding-bottom: 15px;
 }
 
+.header-bottom h1,
 .advantage h1 {
     font-size: 60px;
     text-align: center;
     color: var(--theme-font-color);
-    margin-bottom: 30px;
 }
 
 @media screen and (max-width: 1000px) {
+    .header-bottom h1,
     .advantage h1 {
         font-size: calc(var(--size-index) * 3.3 + 7px);
     }
