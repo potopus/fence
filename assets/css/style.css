@@ -77,8 +77,27 @@ th {
     --duration__open: 1s;
     --padding-cities: 10px;
     --top-position-burger: 0px;
+    --padding-arrow:-1%;
 
 }
+
+@media screen and (max-width: 900px) {
+    :root {
+        --padding-arrow:-1.6%;
+    }
+}
+@media screen and (max-width: 768px) {
+    :root {
+        --padding-arrow:-3.5vw;
+    }
+}
+@media screen and (max-width: 500px) {
+    :root {
+        --padding-arrow: 30%;
+    }
+}
+
+
 
 .body {
     display: flex;
@@ -759,6 +778,7 @@ th {
 
 /* faq */
 
+.slider-block__title,
 .faq-title {
     font-size: 40px;
     font-weight: 700;
@@ -766,6 +786,7 @@ th {
 }
 
 @media screen and (max-width: 500px) {
+    .slider-block__title,
     .faq-title {
         font-size: 6vw;
     }
@@ -1699,6 +1720,121 @@ th {
 .table-body__wrapper.active {
     display: block;
 }
+
+
+
+/* slider-block */
+
+.slider-block__title{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+@media screen and (max-width: 500px) {
+  
+    .slider-block {
+        padding-bottom: 60px;
+    }
+}
+.slider-items {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 3%;
+}
+
+@media screen and (max-width: 500px) {
+    .slider-items{
+        padding: 0;
+    }
+  
+}
+.slider-item {
+    max-width: 443px;
+}
+.slider-item__image {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/* slider-block settings */
+
+/* Слайдер */
+.slick-slider{}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list {
+    overflow: hidden;
+}
+/* Лента слайдов */
+.slider-block .slick-track{
+    display: flex;
+    gap: 10px;
+}
+/* Слайд */
+.slider-block .slick-slide{
+    /* width: 443px; */
+}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+
+.arrow-wrapper{
+    width: 50px;
+}
+.slick-arrow {
+    font-size: 0;
+    position: absolute;
+    z-index: 2;
+    background-color: transparent;
+}
+
+@media screen and (max-width: 500px) {
+  
+    .slick-arrow {
+        bottom: -60px;
+    }
+}
+
+
+
+.slick-arrow img{
+    width: 100%;
+}
+/* Стрелка влево */
+.slick-arrow.arrow__prev {
+
+    left: var(--padding-arrow);
+}
+
+/* Стрелка вправо */
+.slick-arrow.arrow__next{
+   
+    right: var(--padding-arrow);
+
+}
+
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slick-dots{}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{}
+/* Элемент точки */
+.slick-dots li button{}
+
 
 /* *,
 *::before,
