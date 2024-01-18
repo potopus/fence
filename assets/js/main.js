@@ -103,8 +103,8 @@ $(document).ready(function () {
     $('.slider-items').slick({
         // variableWidth: true,
         slidesToShow: 3,
-        prevArrow: "<div class='arrow-wrapper arrow__prev'><img src='../assets/img/svg/arrow-prev.svg' class='prev' alt='1'></div>",
-        nextArrow: "<div class='arrow-wrapper arrow__next'><img src='../assets/img/svg/arrow-next.svg' class='next' alt='2'></div>",
+        prevArrow: "<div class='arrow-wrapper arrow__prev'><img src='./assets/img/svg/arrow-prev.svg' class='prev' alt='1'></div>",
+        nextArrow: "<div class='arrow-wrapper arrow__next'><img src='./assets/img/svg/arrow-next.svg' class='next' alt='2'></div>",
         responsive: [
             {
                 breakpoint: 769,
@@ -193,14 +193,14 @@ if (slides.length > 0) {
             let clickedSlide = e.target.closest('.swiper-slide');
             // Сохранение текущего индекса слайда
             currentSlidesPerView = swiper.params.slidesPerView;
-            console.log("swiper.clickedIndex " + swiper.clickedIndex);
-            console.log(" slidesPerView; " + currentSlidesPerView);
+            // console.log("swiper.clickedIndex " + swiper.clickedIndex);
+            // console.log(" slidesPerView; " + currentSlidesPerView);
             // currentSlideIndex = clickedSlide.swiper.slideIndex;
             let clickedSlideIndex = swiper.getSlideIndex(clickedSlide);
             document.querySelector(".swiper-inner").classList.add("swiper__full-screen");
             swiper.params.slidesPerView = 1;
             swiper.params.initialSlide= 1,
-            console.log(clickedSlideIndex);
+            // console.log(clickedSlideIndex);
             // Установка активного слайда после обновления
             swiper.params.initialSlide = clickedSlideIndex ;
             swiper.update();
