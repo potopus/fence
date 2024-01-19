@@ -100,26 +100,28 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 $(document).ready(function () {
-    $('.slider-items').slick({
-        // variableWidth: true,
-        slidesToShow: 3,
-        prevArrow: "<div class='arrow-wrapper arrow__prev'><img src='./assets/img/svg/arrow-prev.svg' class='prev' alt='1'></div>",
-        nextArrow: "<div class='arrow-wrapper arrow__next'><img src='./assets/img/svg/arrow-next.svg' class='next' alt='2'></div>",
-        responsive: [
-            {
-                breakpoint: 769,
-                settings: {
-                    slidesToShow: 2,
+    if ($('.slider-items')) {
+        $('.slider-items').slick({
+            // variableWidth: true,
+            slidesToShow: 3,
+            prevArrow: "<div class='arrow-wrapper arrow__prev'><img src='./assets/img/svg/arrow-prev.svg' class='prev' alt='1'></div>",
+            nextArrow: "<div class='arrow-wrapper arrow__next'><img src='./assets/img/svg/arrow-next.svg' class='next' alt='2'></div>",
+            responsive: [
+                {
+                    breakpoint: 769,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 500,
+                    settings: {
+                        slidesToShow: 1,
+                    }
                 }
-            },
-            {
-                breakpoint: 500,
-                settings: {
-                    slidesToShow: 1,
-                }
-            }
-        ]
-    });
+            ]
+        });
+    }
 });
 
 //   init swiper
@@ -130,8 +132,8 @@ const swiper = new Swiper('.slider-block .swiper', {
     loop: true,
     slidesPerView: 3,
     spaceBetween: 10,
-   
-    
+
+
 
     // Navigation arrows
     navigation: {
@@ -170,7 +172,7 @@ const galeryClose = () => {
         swiper.params.slidesPerView = currentSlidesPerView;
         // swiper.params.centeredSlides = false;
         swiper.update();
-        swiper.slideTo( swiper.params.initialSlide, 0, true );
+        swiper.slideTo(swiper.params.initialSlide, 0, true);
         // swiper.params.observeParents = true;
         // swiper.params.observeSlideChildren = true;
         // swiper.params.preloadImages = 5;
@@ -191,30 +193,30 @@ const galeryClose = () => {
 if (slides.length > 0) {
     slides.forEach(slide => {
         slide.addEventListener("click", (e) => {
-            if(!document.querySelector(".swiper-inner").classList.contains("swiper__full-screen")){
-            let clickedSlide = e.target.closest('.swiper-slide');
-            // Сохранение текущего индекса слайда
-            currentSlidesPerView = swiper.params.slidesPerView;
-             swiper.update();
-            // console.log("swiper.clickedIndex " + swiper.clickedIndex);
-            console.log(" slidesPerView; " + currentSlidesPerView);
-            // currentSlideIndex = clickedSlide.swiper.slideIndex;
-            let clickedSlideIndex = swiper.getSlideIndex(clickedSlide);
-            document.querySelector(".swiper-inner").classList.add("swiper__full-screen");
-            swiper.params.slidesPerView = 1;
-            swiper.params.initialSlide= 1,
-            // console.log(clickedSlideIndex);
-            // Установка активного слайда после обновления
-            swiper.params.initialSlide = clickedSlideIndex ;
-            swiper.update();
+            if (!document.querySelector(".swiper-inner").classList.contains("swiper__full-screen")) {
+                let clickedSlide = e.target.closest('.swiper-slide');
+                // Сохранение текущего индекса слайда
+                currentSlidesPerView = swiper.params.slidesPerView;
+                swiper.update();
+                // console.log("swiper.clickedIndex " + swiper.clickedIndex);
+                console.log(" slidesPerView; " + currentSlidesPerView);
+                // currentSlideIndex = clickedSlide.swiper.slideIndex;
+                let clickedSlideIndex = swiper.getSlideIndex(clickedSlide);
+                document.querySelector(".swiper-inner").classList.add("swiper__full-screen");
+                swiper.params.slidesPerView = 1;
+                swiper.params.initialSlide = 1,
+                    // console.log(clickedSlideIndex);
+                    // Установка активного слайда после обновления
+                    swiper.params.initialSlide = clickedSlideIndex;
+                swiper.update();
 
-            swiper.slideTo(clickedSlideIndex, 0, true );
-            swiper.slidesPerViewDynamic();
-            swiper.update();
-            swiper.updateSlides();
-            swiper.update();
-            swiper.updateProgress();
-            swiper.update();
+                swiper.slideTo(clickedSlideIndex, 0, true);
+                swiper.slidesPerViewDynamic();
+                swiper.update();
+                swiper.updateSlides();
+                swiper.update();
+                swiper.updateProgress();
+                swiper.update();
             }
         });
         setTimeout(() => {
