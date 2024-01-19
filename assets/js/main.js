@@ -51,7 +51,6 @@ menu.addEventListener("click", function () {
     }
 });
 
-// мобильная таблица
 let firstElements = document.querySelectorAll('.mobile-table .ah2');
 
 // Добавляем слушатель события click для каждого элемента "first"
@@ -167,6 +166,7 @@ const galeryClose = () => {
 
         // Возвращаем slidesPerView к начальному значению согласно текущему брейкпоинту
         swiper.update();
+        console.log("currentSlidesPerView " + currentSlidesPerView);
         swiper.params.slidesPerView = currentSlidesPerView;
         // swiper.params.centeredSlides = false;
         swiper.update();
@@ -191,12 +191,13 @@ const galeryClose = () => {
 if (slides.length > 0) {
     slides.forEach(slide => {
         slide.addEventListener("click", (e) => {
+            if(!document.querySelector(".swiper-inner").classList.contains("swiper__full-screen")){
             let clickedSlide = e.target.closest('.swiper-slide');
             // Сохранение текущего индекса слайда
             currentSlidesPerView = swiper.params.slidesPerView;
-            swiper.update();
+             swiper.update();
             // console.log("swiper.clickedIndex " + swiper.clickedIndex);
-            // console.log(" slidesPerView; " + currentSlidesPerView);
+            console.log(" slidesPerView; " + currentSlidesPerView);
             // currentSlideIndex = clickedSlide.swiper.slideIndex;
             let clickedSlideIndex = swiper.getSlideIndex(clickedSlide);
             document.querySelector(".swiper-inner").classList.add("swiper__full-screen");
@@ -208,8 +209,13 @@ if (slides.length > 0) {
             swiper.update();
 
             swiper.slideTo(clickedSlideIndex, 0, true );
+            swiper.slidesPerViewDynamic();
             swiper.update();
-
+            swiper.updateSlides();
+            swiper.update();
+            swiper.updateProgress();
+            swiper.update();
+            }
         });
         setTimeout(() => {
             swiper.update();
