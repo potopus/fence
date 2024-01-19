@@ -149,6 +149,12 @@ th {
     }
 
 }
+@media screen and (max-width: 1000px) {
+    .header-top {
+        flex-wrap: wrap;
+    }
+
+}
 
 .header-title-block {
     display: flex;
@@ -225,6 +231,7 @@ th {
 @media screen and (max-width: 1000px) {
     .info-block {
         margin-top: 20px;
+        margin-bottom: 20px;
         font-size: calc(var(--size-index) * 1.5 + 5px);
     }
 
@@ -361,6 +368,8 @@ th {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px 0px;
+    box-sizing: content-box;
     
 }
 
@@ -523,13 +532,24 @@ th {
     color: var(--theme-font-color);
 }
 
+@media screen and (max-width: 1280px) {
+    .header-bottom h1,
+    .advantage h1 {
+        font-size: calc(var(--size-index) * 4.2 + 7px);
+    };
+}
+
 @media screen and (max-width: 1000px) {
     .header-bottom h1,
     .advantage h1 {
         font-size: calc(var(--size-index) * 3.3 + 7px);
-    }
-
-    ;
+    };
+}
+@media screen and (max-width: 500px) {
+    .header-bottom h1,
+    .advantage h1 {
+        font-size: calc(var(--size-index) * 4.5 + 7px);
+    };
 }
 
 .advantage-items {
@@ -1122,6 +1142,11 @@ th {
         align-self: flex-start;
         flex: 1 1 170px;
         order: 4;
+        font-size: 3.5vw;
+    }
+
+    .none500{
+        display: none;
     }
 }
 
@@ -1397,6 +1422,33 @@ th {
     font-size: 30px;
     font-weight: 900;
 }
+
+@media screen and (max-width: 1280px) {
+    .install-description-control .button {
+        font-size: calc(1vw * 3);
+        /* font-weight: 200; */
+    }
+  
+}
+@media screen and (max-width: 1000px) {
+    .install-description-control .button {
+        font-size: calc(1vw * 3);
+        /* font-weight: 200; */
+        padding: 14px 30px;
+    }
+  
+}
+
+@media screen and (max-width: 768px) {
+    .install-description-control .button {
+        --index-fz:2.9vw;
+        width: 100%;
+        font-size: calc(2vw * 1.8 + 3px);
+    }
+  
+}
+
+
 
 @media screen and (max-width: 500px) {
     .price-install {
@@ -1763,6 +1815,7 @@ th {
 @media screen and (max-width: 500px) {
     .slider-items{
         padding: 0;
+        margin-bottom: 70px;
     }
   
 }

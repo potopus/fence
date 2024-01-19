@@ -51,6 +51,7 @@ menu.addEventListener("click", function () {
     }
 });
 
+// мобильная таблица
 let firstElements = document.querySelectorAll('.mobile-table .ah2');
 
 // Добавляем слушатель события click для каждого элемента "first"
@@ -193,6 +194,7 @@ if (slides.length > 0) {
             let clickedSlide = e.target.closest('.swiper-slide');
             // Сохранение текущего индекса слайда
             currentSlidesPerView = swiper.params.slidesPerView;
+            swiper.update();
             // console.log("swiper.clickedIndex " + swiper.clickedIndex);
             // console.log(" slidesPerView; " + currentSlidesPerView);
             // currentSlideIndex = clickedSlide.swiper.slideIndex;
@@ -206,11 +208,6 @@ if (slides.length > 0) {
             swiper.update();
 
             swiper.slideTo(clickedSlideIndex, 0, true );
-            swiper.slidesPerViewDynamic();
-            swiper.update();
-            swiper.updateSlides();
-            swiper.update();
-            swiper.updateProgress();
             swiper.update();
 
         });
