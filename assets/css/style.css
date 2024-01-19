@@ -361,16 +361,32 @@ th {
 }
 
 .header-bottom{
-    background: url(../img/fon.jpg);
+    /* background: url(../img/fon.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px 0px;
     box-sizing: content-box;
+    position: relative;
     
+}
+
+.header-bottom::before{
+    content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(../img/fon.jpg); 
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-attachment: fixed;
+  filter: grayscale(0.2) contrast(0.4) brightness(0.6);
+  z-index: -1; 
 }
 
 .header-bottom h1{
