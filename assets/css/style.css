@@ -79,6 +79,8 @@ th {
     --top-position-burger: 0px;
     --padding-arrow: -1%;
     --fz-button:min(4vw, 45px);
+      /* Space s: 23px → 60px */
+  --space-s: clamp(23px, 0.6667rem + 3.8542vw, 60px);
 
 }
 
@@ -548,19 +550,17 @@ th {
 
 .header-bottom h1,
 .advantage h1 {
-    font-size: 60px;
+    font-size: var(--space-s);
     text-align: center;
     color: var(--theme-font-color);
 }
-
+/* 
 @media screen and (max-width: 1280px) {
 
     .header-bottom h1,
     .advantage h1 {
         font-size: calc(var(--size-index) * 4.2 + 7px);
     }
-
-    ;
 }
 
 @media screen and (max-width: 1000px) {
@@ -569,19 +569,14 @@ th {
     .advantage h1 {
         font-size: calc(var(--size-index) * 3.3 + 7px);
     }
-
-    ;
 }
 
 @media screen and (max-width: 500px) {
-
     .header-bottom h1,
     .advantage h1 {
         font-size: calc(var(--size-index) * 4.5 + 7px);
     }
-
-    ;
-}
+} */
 
 .advantage-items {
     display: flex;
@@ -1401,11 +1396,15 @@ th {
     line-height: 180%;
 }
 
-.install-description-content {
-    padding: 15px 20px 0px;
+.install-description-content{
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.install-description-content,
+.description-article-content {
+    padding: 15px clamp(0rem, -0.4167rem + 2.0833vw, 20px) 0px;
 }
 
 @media screen and (max-width: 1280px) {
@@ -1453,7 +1452,7 @@ th {
 }
 
 .price-install {
-    font-size: 30px;
+    font-size: clamp(15px, 0.625rem + 1.5625vw, 30px);
     font-weight: 900;
 }
 
@@ -1486,11 +1485,11 @@ th {
 
 
 
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
     .price-install {
         font-size: 20px;
     }
-}
+} */
 
 /* description-article */
 .description-article {}
@@ -1570,18 +1569,15 @@ th {
 }
 
 .title {
-    font-size: 40px;
     font-weight: 700;
     text-align: center;
 }
-
-@media screen and (max-width: 500px) {
-
+    
     .content-title,
     .title {
-        font-size: 6vw;
+        font-size: clamp(20px, 0.8333rem + 2.0833vw, 40px);
     }
-}
+
 
 .steps-content {
     display: flex;
@@ -1728,6 +1724,11 @@ th {
 
 .table-body .table1 tr td:nth-child(n+1) {
     width: 167px;
+}
+
+.table-body .table1 tr td:not(:first-child){
+    font-size: clamp(11px, 0.0313rem + 1.3672vw, 18px);
+    line-height: 1.2;
 }
 
 .table-body .table1 tr td:first-child {

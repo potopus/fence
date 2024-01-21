@@ -168,25 +168,24 @@ const galeryClose = () => {
 
         // Возвращаем slidesPerView к начальному значению согласно текущему брейкпоинту
         swiper.update();
+        console.log("close");
         console.log("currentSlidesPerView " + currentSlidesPerView);
+         console.log("swiper.params.realIndex " + swiper.realIndex);
         swiper.params.slidesPerView = currentSlidesPerView;
         // swiper.params.centeredSlides = false;
         swiper.update();
-        swiper.slideTo(swiper.params.initialSlide, 0, true);
+        swiper.slideToLoop(swiper.realIndex, 0, true);
         // swiper.params.observeParents = true;
         // swiper.params.observeSlideChildren = true;
         // swiper.params.preloadImages = 5;
         // swiper.params.slidesPerView = 3;
         swiper.update();
-        swiper.updateSlides();
-        swiper.update();
-        swiper.updateProgress();
-        swiper.update();
-        setTimeout(() => {
-            swiper.update();
-            swiper.updateSlides();
-            swiper.updateProgress();
-        })
+       
+        // setTimeout(() => {
+        //     swiper.update();
+        //     swiper.updateSlides();
+        //     swiper.updateProgress();
+        // })
     });
 }
 
@@ -217,12 +216,12 @@ if (slides.length > 0) {
                 swiper.update();
                 swiper.updateProgress();
                 swiper.update();
+                setTimeout(() => {
+                    swiper.update();
+                    galeryClose();
+                })
             }
         });
-        setTimeout(() => {
-            swiper.update();
-            galeryClose();
-        })
 
     });
 }
