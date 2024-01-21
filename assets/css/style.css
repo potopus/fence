@@ -559,8 +559,6 @@ th {
     .advantage h1 {
         font-size: calc(var(--size-index) * 4.2 + 7px);
     }
-
-    ;
 }
 
 @media screen and (max-width: 1000px) {
@@ -569,18 +567,13 @@ th {
     .advantage h1 {
         font-size: calc(var(--size-index) * 3.3 + 7px);
     }
-
-    ;
 }
 
 @media screen and (max-width: 500px) {
-
     .header-bottom h1,
     .advantage h1 {
         font-size: calc(var(--size-index) * 4.5 + 7px);
     }
-
-    ;
 }
 
 .advantage-items {
