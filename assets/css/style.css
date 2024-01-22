@@ -258,7 +258,7 @@ th {
     }
 
     .info-block {
-        justify-content: space-between;
+        /* justify-content: space-between; */
         flex-wrap: wrap;
         font-size: calc(var(--size-index) * 1.5 + 7px);
     }
@@ -554,7 +554,7 @@ th {
 
 @media screen and (max-width: 500px) {
     .burger-block {
-        align-self: baseline;
+        align-self: center;
     }
 }
 
@@ -1081,11 +1081,17 @@ th {
     color: rgba(0, 0, 0, 0.7);
 }
 
+.contact-form__title,
+.contact-form__description {
+    text-align: center;
+}
+
 .contact-form-content {
     width: 100%;
     display: flex;
     gap: 30px;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -1241,7 +1247,7 @@ th {
 }
 
 .button:active,
-.kind-cards .block:hover .green_button  {
+.kind-cards .block:active .green_button  {
     transform: scale(0.98);
 }
 
