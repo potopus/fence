@@ -296,6 +296,14 @@ th {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    line-height: clamp(22px, 0.8661rem + 0.7143vw, 23px);
+}
+
+@media screen and (max-width: 1000px) {
+    .time-work__content{
+        line-height: normal;
+    }
+  
 }
 
 .time-work__content .text {
@@ -727,6 +735,10 @@ th {
 }
 .kind-cards .block{
     padding-top: 0px;
+}
+
+@media mobile {
+    
 }
 
 
