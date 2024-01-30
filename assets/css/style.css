@@ -2619,7 +2619,7 @@ th {
 
 
 .quiz-question:has(input:checked) .checkbox-icon {
-    box-shadow: 0 0 0 9px var(--theme-font-color);
+    /* box-shadow: 0 0 0 9px var(--theme-font-color); */
 }
 
 .quiz-question:has(input:checked) .checkbox-icon svg {
