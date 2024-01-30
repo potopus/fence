@@ -60,6 +60,13 @@ quizButtonPrev.addEventListener("click", () => {
   let answQuestionIndex = [...quizItems].findIndex(
     (item) => !item.classList.contains("quiz-hidden")
   );
+
+  if(quizButtonNext.classList.contains("warning")){
+    quizButtonNext.classList.remove("warning");
+    quizButtonNext.innerText = "Вперед"
+  }
+
+
   if (answQuestionIndex > 0) {
     quizItems[answQuestionIndex - 1].classList.remove("quiz-hidden");
     quizItems[answQuestionIndex].classList.add("quiz-hidden");
