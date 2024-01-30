@@ -1080,8 +1080,8 @@ th {
     }
 }
 
-.answer my-accord {
-    margin-top: 15px;
+.answer {
+    padding-top: 15px;
 }
 
 .answer p+p {
