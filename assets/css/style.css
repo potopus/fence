@@ -2448,6 +2448,7 @@ th {
 
 
 .quiz-question-image {
+    display: block;
     border-radius: 4px;
     overflow: hidden;
     width: 100%;
@@ -2464,6 +2465,9 @@ th {
     border: 0px;
 }
 
+.quiz-item-text{
+    display: block;
+}
 
 .form-wrapper .quiz-item-text {
     margin: 0;
@@ -2497,6 +2501,10 @@ th {
 .form-wrapper .quiz-question:has(input:checked) {
     background: transparent;
     color: var(--color-font-dark);
+}
+
+.quiz-question-icon-wrapper{
+    display: block;
 }
 
 .form-wrapper .quiz-question:has(input:checked) .quiz-question-icon-wrapper::after {
