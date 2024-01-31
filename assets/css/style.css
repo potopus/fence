@@ -406,7 +406,16 @@ th {
     }
 }
 
+@media screen and (max-width: 500px) {
+    .phone-number{
+        font-size: clamp(0.938rem, 0.817rem + 0.385vi, 1.125rem);
+    }
+  
+}
+
+
 .header-midle {
+    width:100%;
     border-top: 3px solid #ebeeee;
     color: var(--color-font-main-gray);
 }
@@ -432,6 +441,7 @@ th {
 .header-bottom::before {
     content: '';
     position: absolute;
+    width: 100%;
     top: 0;
     right: 0;
     bottom: 0;
