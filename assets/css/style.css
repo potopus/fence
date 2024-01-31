@@ -434,6 +434,13 @@ th {
     overflow: hidden;
 }
 
+@media screen and (max-width: 768px) {
+    .header-bottom{
+        height: 200px;
+    }
+  
+}
+
 .header-bottom__calc {
     height: 15vh;
     text-transform: uppercase;
