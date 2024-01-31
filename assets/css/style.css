@@ -1614,7 +1614,6 @@ th {
 @media screen and (max-width: 1280px) {
     .install-description-control .button {
         font-size: calc(1vw * 3);
-        /* font-weight: 200; */
     }
 
 }
@@ -1624,7 +1623,6 @@ th {
     .install-description-control .button,
     .description-article-content .button {
         font-size: calc(1vw * 3);
-        /* font-weight: 200; */
         padding: 14px 30px;
     }
 
@@ -1691,7 +1689,6 @@ th {
 @media screen and (max-width: 1000px) {
     .description-article-content .button {
         font-size: calc(1vw * 3);
-        /* font-weight: 200; */
         padding: 14px 30px;
     }
 
