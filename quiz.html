@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/fonts.css">
+    <link rel="stylesheet" href="./assets/css/icon-fonts.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Fence Install</title>
+</head>
+
+<body class="main-font body body-calc">
+
+    <header id="header" class="header header-calc">
+        <div class="wrapper">
+            <div class="header-top">
+                <div class="header-title-block">
+                    <div class="logo">
+                        <a href="./index.html"><img loading="lazy" src="./assets/img/logo43.jpg" alt="logo"></a>
+                    </div>
+                    <div class="header-title">
+                        <span>ЗАБОРЫ ПОД КЛЮЧ. <br> От продажи материалов до монтажа</span>
+                    </div>
+                </div>
+                <div class="button">
+                    <a href="./quiz.html#quiz">Калькулятор<br class="none500"> стоимости</a>
+                </div>
+                <div class="info-block" data-da=".header-midle, 1000, first">
+                    <div class="info-block-shedule">
+                        <div class="time-work__icon icon icon-clock">
+                            <!-- <img loading="lazy" src="./assets/img/svg/clock-svgrepo-com.svg" alt="clock-icon"> -->
+                        </div>
+                        <div class="time-work__content">
+                            <div class="text">
+                                <div class="week">Пн-Пт:</div>
+                                <div class="time">9:00 - 18:00</div>
+                            </div>
+                            <div class="text">
+                                <div class="week">Сбт:</div>
+                                <div class="time">10:00 - 18:00</div>
+                            </div>
+                            <!-- <a href="/" class="info-block__recall">Обратный звонок</a> -->
+                        </div>
+                    </div>
+                    <div class="info-block-contacts">
+                        <div class="info-block__contacts-icon icon icon-phone ">
+                            <!-- <img loading="lazy" src="./assets/img/svg/phone.svg" alt="phone"> -->
+                        </div>
+                        <div class="phone-number">
+                            <a href="tel:+375295554433"> +375 (29) 555 44 33</a>
+                            <a href="tel:+375295554433"> +375 (29) 555 44 33</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="burger-block">
+                    <label class="label-burger" for="check-menu"></label>
+                    <input type="checkbox" name="check-menu" id="check-menu" class="check-menu">
+                    <div class="burger-icon">
+                        <span class="burger__icon-stripe"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="header-midle">
+                <nav class="header-menu">
+                    <ul class="menu-items">
+                        <li class="menu-item"><a href="./">Главная</a></li>
+                        <li class="menu-item"><a href="./index.html#kind-cards">Услуги</a></li>
+                        <li class="menu-item"><a href="#faq">Популярные вопросы</a></li>
+                        <li class="menu-item"><a href="./second.html">Примерные цены</a></li>
+                    </ul>
+                    <ul class="phone-mobile">
+                        <li><a href="tel:+375295554433">+375 (29) 555 44 33</a></li>
+                        <li><a href="tel:+375295554433">+375 (29) 555 44 33</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="header-bottom header-bottom__calc ">
+            <h1>Калькулятор стоимости</h1>
+        </div>
+    </header>
+    <section id="quiz" class="quiz">
+        <div class="wrapper">
+            <div class="quiz-inner">
+                <div id="quiz-indicator" class="quiz-indicator">
+                    <ul class="quiz-steps-content">
+                        <li class="quiz-step button quiz-active">Вопрос 1</li>
+                        <li class="quiz-step button">Вопрос 2</li>
+                        <li class="quiz-step button">Вопрос 3</li>
+                        <li class="quiz-step button">Вопрос 4</li>
+                        <li class="quiz-step button">Вопрос 5</li>
+                        <li class="quiz-step button">Форма</li>
+                    </ul>
+                </div>
+                <div class="quiz-questions">
+                    <div class="quiz-item" id="quiz-item-material">
+                        <h2>Выберите материал забора</h2>
+                        <div class="quiz-item__wrapper">
+                            <label class="quiz-question">
+                                <span class="quiz-question-image"><img loading="lazy"
+                                        src="./assets/img/kind-cards/photo1.jpg" alt="quiz-image"></span>
+                                <input name="material" value="metall" type="radio">
+                                <span class="quiz-question-icon-wrapper">
+                                    <span class="checkbox-icon">
+                                        <svg>
+                                            <use xlink:href="./assets/img/svg/checked.svg#icon1"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="quiz-item-text">Металлопрофиль</span>
+                            </label>
+                            <label class="quiz-question">
+                                <span class="quiz-question-image"><img loading="lazy"
+                                        src="./assets/img/kind-cards/photo1.jpg" alt="quiz-image"></span>
+                                <input name="material" value="shtaket-one" type="radio">
+                                <span class="quiz-question-icon-wrapper">
+                                    <span class="checkbox-icon">
+                                        <svg>
+                                            <use xlink:href="./assets/img/svg/checked.svg#icon1"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="quiz-item-text">Штакетник с односторонним заполнением</span>
+                            </label>
+                            <label class="quiz-question">
+                                <span class="quiz-question-image"><img loading="lazy"
+                                        src="./assets/img/kind-cards/photo1.jpg" alt="quiz-image"></span>
+                                <input name="material" value="shtaket-two" type="radio">
+                                <span class="quiz-question-icon-wrapper">
+                                    <span class="checkbox-icon">
+                                        <svg>
+                                            <use xlink:href="./assets/img/svg/checked.svg#icon1"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="quiz-item-text">Штакетник с двухсторонним заполнением</span>
+                            </label>
+                            <label class="quiz-question">
+                                <span class="quiz-question-image"><img loading="lazy"
+                                        src="./assets/img/kind-cards/photo1.jpg" alt="quiz-image"></span>
+                                <input name="material" value="rancho" type="radio">
+                                <span class="quiz-question-icon-wrapper">
+                                    <span class="checkbox-icon">
+                                        <svg>
+                                            <use xlink:href="./assets/img/svg/checked.svg#icon1"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="quiz-item-text">Забор-Жалюзи/Ранчо</span>
+                            </label>
+                            <label class="quiz-question">
+                                <span class="quiz-question-image"><img loading="lazy"
+                                        src="./assets/img/kind-cards/photo1.jpg" alt="quiz-image"></span>
+                                <input name="material" value="rabitsa" type="radio">
+                                <span class="quiz-question-icon-wrapper">
+                                    <span class="checkbox-icon">
+                                        <svg>
+                                            <use xlink:href="./assets/img/svg/checked.svg#icon1"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="quiz-item-text">Сетка-рабица</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="quiz-item quiz-hidden" id="quiz-item-length">
+                        <h2>Укажите общую длину забора</h2>
+                        <div class="quiz-item__wrapper">
+                            <label class="quiz-question">
+                                <span class="quiz-question-image"><img loading="lazy"
+                                        src="./assets/img/kind-cards/photo1.jpg" alt="quiz-image"></span>
+                                <input type="number" placeholder="Длина в метрах">
+                                <span>,&nbsp;м</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="quiz-item quiz-hidden" id="quiz-item-hight">
+                        <h2>Укажите высоту забора</h2>
+                        <div class="quiz-item__wrapper">
+                            <label class="quiz-question">
+                                <span class="quiz-question-image"><img loading="lazy"
+                                        src="./assets/img/kind-cards/photo1.jpg" alt="quiz-image"></span>
+                                <input type="number" placeholder="Высота в метрах">
+                                <span>,&nbsp;м</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="quiz-item quiz-hidden" id="quiz-item-additionally">
+                        <h2>Нужны ли ворота и калитка?</h2>
+
+                        <div class="quiz-item__wrapper">
+                            <label class="quiz-question">
+                                <span class="quiz-question-image"><img loading="lazy"
+                                        src="./assets/img/kind-cards/photo1.jpg" alt="quiz-image"></span>
+                                <input name="vorota" value="otkat" type="radio">
+                                <span class="quiz-question-icon-wrapper">
+                                    <span class="checkbox-icon">
+                                        <svg>
+                                            <use xlink:href="./assets/img/svg/checked.svg#icon1"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="quiz-item-text">Откатные ворота</span>
+                            </label>
+                            <label class="quiz-question">
+                                <span class="quiz-question-image"><img loading="lazy"
+                                        src="./assets/img/kind-cards/photo1.jpg" alt="quiz-image"></span>
+                                <input name="vorota" value="raspash" type="radio">
+                                <span class="quiz-question-icon-wrapper">
+                                    <span class="checkbox-icon">
+                                        <svg>
+                                            <use xlink:href="./assets/img/svg/checked.svg#icon1"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="quiz-item-text">Распашные ворота</span>
+                            </label>
+                            <label class="quiz-question">
+                                <span class="quiz-question-image"><img loading="lazy"
+                                        src="./assets/img/kind-cards/photo1.jpg" alt="quiz-image"></span>
+                                <input name="vorota" value="kalitka" type="checkbox">
+                                <span class="quiz-question-icon-wrapper">
+                                    <span class="checkbox-icon">
+                                        <svg>
+                                            <use xlink:href="./assets/img/svg/checked.svg#icon1"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="quiz-item-text">Добавить Калитку</span>
+                            </label>
+                            <label class="quiz-question">
+                                <span class="quiz-question-image"><img loading="lazy"
+                                        src="./assets/img/kind-cards/photo1.jpg" alt="quiz-image"></span>
+                                <input name="vorota" value="nothing" type="radio">
+                                <span class="quiz-question-icon-wrapper">
+                                    <span class="checkbox-icon">
+                                        <svg>
+                                            <use xlink:href="./assets/img/svg/checked.svg#icon1"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="quiz-item-text">Ничего мне не нада</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="quiz-item quiz-hidden" id="quiz-item-payment">
+                        <h2>выберите вид оплаты</h2>
+                        <div class="quiz-item__wrapper">
+                            <label class="quiz-question">
+                                <span class="quiz-question-image"><img loading="lazy"
+                                        src="./assets/img/kind-cards/photo1.jpg" alt="quiz-image"></span>
+                                <input name="payment" value="rassrochka" type="radio">
+                                <span class="quiz-question-icon-wrapper">
+                                    <span class="checkbox-icon">
+                                        <svg>
+                                            <use xlink:href="./assets/img/svg/checked.svg#icon1"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="quiz-item-text">Рассрочка</span>
+                            </label>
+                            <label class="quiz-question">
+                                <span class="quiz-question-image"><img loading="lazy"
+                                        src="./assets/img/kind-cards/photo1.jpg" alt="quiz-image"></span>
+                                <input name="payment" value="credit" type="radio">
+                                <span class="quiz-question-icon-wrapper">
+                                    <span class="checkbox-icon">
+                                        <svg>
+                                            <use xlink:href="./assets/img/svg/checked.svg#icon1"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="quiz-item-text">Кредит</span>
+                            </label>
+                            <label class="quiz-question">
+                                <span class="quiz-question-image"><img loading="lazy"
+                                        src="./assets/img/kind-cards/photo1.jpg" alt="quiz-image"></span>
+                                <input name="payment" value="nalichka" type="radio">
+                                <span class="quiz-question-icon-wrapper">
+                                    <span class="checkbox-icon">
+                                        <svg>
+                                            <use xlink:href="./assets/img/svg/checked.svg#icon1"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="quiz-item-text">Наличные</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="quiz-item quiz-hidden" id="quiz-item-form">
+                        <h2>Мы сделали для Вас расчет. Пожалуйста, укажите Ваш номер телефона и мы перезвоним Вам и
+                            сообщим стоимость</h2>
+                        <div class="quiz-item__wrapper">
+                            <div class="form-wrapper">
+                                <form action="script.php" method="post" class="form">
+                                    <div class="form-fields">
+                                        <input class="form-field" type="text" name="name" placeholder="Введите ваше имя"
+                                            required />
+                                        <input class="form-field" type="tel" name="phone"
+                                            pattern="\+375\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+                                            placeholder="+375(__)___-__-__" required />
+                                    </div>
+                                    <label class="quiz-question">
+                                        <!-- <div class="quiz-question-image"><img loading="lazy" src="./assets/img/kind-cards/photo1.jpg" alt="quiz-image" ></div> -->
+                                        <input name="contact-form" value="viber" type="checkbox">
+                                        <span class="quiz-question-icon-wrapper">
+                                            <span class="checkbox-icon">
+                                                <svg>
+                                                    <use xlink:href="./assets/img/svg/viber.svg#viber-icon"></use>
+                                                </svg>
+                                            </span>
+                                        </span>
+                                        <span class="quiz-item-text">Выслать на VIBER</span>
+                                    </label>
+                                    <div class="submit-btn">
+                                        <input class="button" type="submit" value="Получить расчет">
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="quiz-controller">
+                    <button id="quiz-button-prev" class="quiz-controller__prev button quiz-hidden">назад</button>
+                    <button id="quiz-button-next" class="quiz-controller__next button">Вперед</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer-inner">
+                <div class="trade-mark">
+                    <div class="annotation">
+                        © 2024 Не является публичной офертой.
+                        <a href="/sitemap/"></a>
+                    </div>
+                    <div class="politic-link"><a href="#">
+                            Политика конфеденциальности
+                        </a></div>
+                </div>
+                <div class="soc-links">
+                    <ul class="soc-list">
+                        <li class="soc-icon icon-facebook"></li>
+                        <li class="soc-icon icon-vk"></li>
+                        <li class="soc-icon icon-instagram"></li>
+                        <li class="soc-icon icon-twitter"></li>
+                    </ul>
+                </div>
+                <div class="call-now">
+                    <h2>Звоните сейчас!</h2>
+                    <p>оказание информ. услуг - ИП Д.А. Глазков, УНП&nbsp;690762596</p>
+                </div>
+            </div>
+            <div class="develop">
+                <a href="https://t.me/PoulBut">Сайт разработан Буткевич П.А.</a>
+            </div>
+        </div>
+    </footer>
+    <div class="button fixbutton dingovaila-besticsia calculate calculate-calc">
+        <a href="/">Калькулятор</a>
+    </div>
+    <script src="./assets/dist/swiper/swiper-bundle.min.js"></script>
+    <script src="./assets/dist/dinamic-adapt/app.js"></script>
+    <script src="./assets/js/quiz.js"></script>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
